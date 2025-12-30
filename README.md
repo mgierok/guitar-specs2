@@ -116,3 +116,6 @@ Base path: `/api/v1`
 
 ## CI
 GitHub Actions runs frontend lint and backend tests on PRs and on pushes to `dev`.
+
+## Smoke Test
+Run `./scripts/smoke.sh` to validate the full containerized stack (build, migrate, seed, and basic endpoints).

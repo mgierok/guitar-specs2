@@ -1,11 +1,14 @@
 import type { Metadata } from "next";
+import { notFound } from "next/navigation";
 
 import { fetchGuitar } from "@/lib/api";
+
+export const dynamic = "force-dynamic";
 
 type PageProps = {
   params: {
     slug: string;
-  };
+  } | Promise<{ slug: string }>;
 };
 
 function titleFromSlug(slug: string) {
@@ -15,21 +18,38 @@ function titleFromSlug(slug: string) {
     .join(" ");
 }
 
+async function resolveParams(params: PageProps["params"]) {
+  const resolved = await Promise.resolve(params);
+  return resolved;
+}
+
 export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
-  const title = titleFromSlug(params.slug);
+  const resolved = await resolveParams(params);
+  if (!resolved?.slug) {
+    return {
+      title: "Guitar",
+    };
+  }
+
+  const title = titleFromSlug(resolved.slug);
 
   return {
     title,
     alternates: {
-      canonical: `/guitars/${params.slug}`,
+      canonical: `/guitars/${resolved.slug}`,
     },
   };
 }
 
 export default async function GuitarDetailPage({ params }: PageProps) {
-  const guitar = await fetchGuitar(params.slug);
+  const resolved = await resolveParams(params);
+  if (!resolved?.slug) {
+    notFound();
+  }
+
+  const guitar = await fetchGuitar(resolved.slug);
 
   return (
     <div className="min-h-screen bg-zinc-950 text-white">

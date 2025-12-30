@@ -2,6 +2,8 @@ import Link from "next/link";
 
 import { fetchGuitars } from "@/lib/api";
 
+export const dynamic = "force-dynamic";
+
 export const metadata = {
   title: "Guitars",
   alternates: {

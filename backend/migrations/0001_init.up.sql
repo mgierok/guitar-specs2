@@ -1,14 +1,37 @@
-CREATE TYPE guitar_type AS ENUM ('electric', 'acoustic', 'classical', 'other');
-CREATE TYPE spec_value_type AS ENUM ('text', 'number', 'bool', 'enum');
-CREATE TYPE media_kind AS ENUM ('image', 'video');
-CREATE TYPE spec_source AS ENUM ('manufacturer', 'editor', 'user');
+DO $$
+BEGIN
+  CREATE TYPE guitar_type AS ENUM ('electric', 'acoustic', 'classical', 'other');
+EXCEPTION
+  WHEN duplicate_object THEN NULL;
+END $$;
 
-CREATE TABLE brand (
+DO $$
+BEGIN
+  CREATE TYPE spec_value_type AS ENUM ('text', 'number', 'bool', 'enum');
+EXCEPTION
+  WHEN duplicate_object THEN NULL;
+END $$;
+
+DO $$
+BEGIN
+  CREATE TYPE media_kind AS ENUM ('image', 'video');
+EXCEPTION
+  WHEN duplicate_object THEN NULL;
+END $$;
+
+DO $$
+BEGIN
+  CREATE TYPE spec_source AS ENUM ('manufacturer', 'editor', 'user');
+EXCEPTION
+  WHEN duplicate_object THEN NULL;
+END $$;
+
+CREATE TABLE IF NOT EXISTS brand (
   id UUID PRIMARY KEY,
   name TEXT NOT NULL UNIQUE
 );
 
-CREATE TABLE guitar (
+CREATE TABLE IF NOT EXISTS guitar (
   id UUID PRIMARY KEY,
   slug TEXT NOT NULL UNIQUE,
   name TEXT NOT NULL,
@@ -21,7 +44,7 @@ CREATE TABLE guitar (
   updated_at TIMESTAMPTZ NOT NULL
 );
 
-CREATE TABLE spec (
+CREATE TABLE IF NOT EXISTS spec (
   id UUID PRIMARY KEY,
   code TEXT NOT NULL UNIQUE,
   label TEXT NOT NULL,
@@ -32,7 +55,7 @@ CREATE TABLE spec (
   guitar_type guitar_type
 );
 
-CREATE TABLE spec_option (
+CREATE TABLE IF NOT EXISTS spec_option (
   id UUID PRIMARY KEY,
   spec_id UUID NOT NULL REFERENCES spec(id),
   value TEXT NOT NULL,
@@ -40,7 +63,7 @@ CREATE TABLE spec_option (
   UNIQUE (spec_id, value)
 );
 
-CREATE TABLE guitar_spec_value (
+CREATE TABLE IF NOT EXISTS guitar_spec_value (
   guitar_id UUID NOT NULL REFERENCES guitar(id),
   spec_id UUID NOT NULL REFERENCES spec(id),
   value_text TEXT,
@@ -51,7 +74,7 @@ CREATE TABLE guitar_spec_value (
   PRIMARY KEY (guitar_id, spec_id)
 );
 
-CREATE TABLE guitar_media (
+CREATE TABLE IF NOT EXISTS guitar_media (
   id UUID PRIMARY KEY,
   guitar_id UUID NOT NULL REFERENCES guitar(id),
   kind media_kind NOT NULL,
@@ -59,6 +82,6 @@ CREATE TABLE guitar_media (
   sort_order INT NOT NULL DEFAULT 0
 );
 
-CREATE INDEX guitar_type_idx ON guitar(type);
-CREATE INDEX guitar_brand_idx ON guitar(brand_id);
-CREATE INDEX guitar_spec_value_spec_idx ON guitar_spec_value(spec_id);
+CREATE INDEX IF NOT EXISTS guitar_type_idx ON guitar(type);
+CREATE INDEX IF NOT EXISTS guitar_brand_idx ON guitar(brand_id);
+CREATE INDEX IF NOT EXISTS guitar_spec_value_spec_idx ON guitar_spec_value(spec_id);

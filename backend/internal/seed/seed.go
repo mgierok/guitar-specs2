@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"io"
 	"os"
+	"strconv"
 	"time"
 
 	"github.com/jackc/pgx/v5/pgtype"
@@ -213,7 +214,7 @@ func numericValue(value *float64) (pgtype.Numeric, error) {
 		return pgtype.Numeric{}, nil
 	}
 	var numeric pgtype.Numeric
-	if err := numeric.Scan(*value); err != nil {
+	if err := numeric.Scan(strconv.FormatFloat(*value, 'f', -1, 64)); err != nil {
 		return pgtype.Numeric{}, err
 	}
 	return numeric, nil

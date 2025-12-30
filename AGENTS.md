@@ -126,6 +126,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Backend: Go’s `testing` package for unit and handler tests.
 - Name tests with clear intent (e.g., `guitar-search.test.ts`, `TestGetGuitarByID`).
 - Run relevant tests as the last step of each plan execution and keep tests updated with changes.
+ - For changes to Docker, env, data, or migrations, run `scripts/smoke.sh`.
 
 ## Unit Test Expectations
 - Backend: add unit tests for handlers, query mappers, and seed/loaders; include success and error paths.
@@ -141,6 +142,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Keep `README.md`, `AGENTS.md`, and `DATABASE.md` updated with any relevant changes.
 - Ask for explicit approval before adding any new external library.
 - Provide a brief plan and wait for approval before making any code changes.
+- `gofmt -w *.go` is pre-approved when needed.
 
 ## Security & Configuration Tips
 Keep secrets out of the repo. Use `.env` files for local config and list required variables in `docs/config.md`.

@@ -4,54 +4,263 @@
     "notes": "Update this file whenever DATABASE.md changes. Test data mirrors normalized specs."
   },
   "brands": [
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f01", "name": "Fender"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f02", "name": "Gibson"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f03", "name": "Ibanez"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f04", "name": "PRS"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f05", "name": "Yamaha"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f06", "name": "Schecter"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f07", "name": "Jackson"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f08", "name": "ESP"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f09", "name": "Gretsch"},
-    {"id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f0a", "name": "Epiphone"}
+    {
+      "id": "810b59f0-2234-4d4a-a2c8-f43b4c1921a5",
+      "name": "Fender"
+    },
+    {
+      "id": "cec0c7a0-8560-4872-b69e-1a1fce2e8e06",
+      "name": "Gibson"
+    },
+    {
+      "id": "11863c5c-aa17-4e41-b93b-6b118b24a546",
+      "name": "Ibanez"
+    },
+    {
+      "id": "59e948f8-7bae-4313-a3a7-8e668300c36a",
+      "name": "PRS"
+    },
+    {
+      "id": "2405111b-6537-43c1-aa5b-f6ced572bb01",
+      "name": "Yamaha"
+    },
+    {
+      "id": "82fd8daa-e64d-44c8-9ea1-4a78758633f9",
+      "name": "Schecter"
+    },
+    {
+      "id": "eacc1f7d-5c74-4157-8413-4b197488029c",
+      "name": "Jackson"
+    },
+    {
+      "id": "9252a334-9f18-47eb-97aa-ef96c0cc9e95",
+      "name": "ESP"
+    },
+    {
+      "id": "ba2d1f51-b74e-4e0f-b4ce-797c7bc15b54",
+      "name": "Gretsch"
+    },
+    {
+      "id": "24caed92-8fe6-45fe-a50a-82aa614c9c09",
+      "name": "Epiphone"
+    }
   ],
   "specs": [
-    {"id": "s0000001-0000-0000-0000-000000000001", "code": "scale_length", "label": "Scale length", "value_type": "number", "unit": "in", "filterable": true, "searchable": false, "guitar_type": "electric"},
-    {"id": "s0000001-0000-0000-0000-000000000002", "code": "nut_width", "label": "Nut width", "value_type": "number", "unit": "mm", "filterable": true, "searchable": false, "guitar_type": "electric"},
-    {"id": "s0000001-0000-0000-0000-000000000003", "code": "frets", "label": "Frets", "value_type": "number", "unit": null, "filterable": true, "searchable": false, "guitar_type": "electric"},
-    {"id": "s0000001-0000-0000-0000-000000000004", "code": "pickup_config", "label": "Pickup configuration", "value_type": "enum", "unit": null, "filterable": true, "searchable": true, "guitar_type": "electric"},
-    {"id": "s0000001-0000-0000-0000-000000000005", "code": "bridge_type", "label": "Bridge type", "value_type": "enum", "unit": null, "filterable": true, "searchable": true, "guitar_type": "electric"},
-    {"id": "s0000001-0000-0000-0000-000000000006", "code": "body_material", "label": "Body material", "value_type": "text", "unit": null, "filterable": true, "searchable": true, "guitar_type": null},
-    {"id": "s0000001-0000-0000-0000-000000000007", "code": "neck_material", "label": "Neck material", "value_type": "text", "unit": null, "filterable": true, "searchable": true, "guitar_type": null},
-    {"id": "s0000001-0000-0000-0000-000000000008", "code": "fingerboard_material", "label": "Fingerboard material", "value_type": "text", "unit": null, "filterable": true, "searchable": true, "guitar_type": null},
-    {"id": "s0000001-0000-0000-0000-000000000009", "code": "finish", "label": "Finish", "value_type": "enum", "unit": null, "filterable": true, "searchable": true, "guitar_type": null},
-    {"id": "s0000001-0000-0000-0000-00000000000a", "code": "color", "label": "Color", "value_type": "enum", "unit": null, "filterable": true, "searchable": true, "guitar_type": null},
-    {"id": "s0000001-0000-0000-0000-00000000000b", "code": "string_count", "label": "String count", "value_type": "number", "unit": null, "filterable": true, "searchable": false, "guitar_type": null}
+    {
+      "id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "code": "scale_length",
+      "label": "Scale length",
+      "value_type": "number",
+      "unit": "in",
+      "filterable": true,
+      "searchable": false,
+      "guitar_type": "electric"
+    },
+    {
+      "id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "code": "nut_width",
+      "label": "Nut width",
+      "value_type": "number",
+      "unit": "mm",
+      "filterable": true,
+      "searchable": false,
+      "guitar_type": "electric"
+    },
+    {
+      "id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "code": "frets",
+      "label": "Frets",
+      "value_type": "number",
+      "unit": null,
+      "filterable": true,
+      "searchable": false,
+      "guitar_type": "electric"
+    },
+    {
+      "id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "code": "pickup_config",
+      "label": "Pickup configuration",
+      "value_type": "enum",
+      "unit": null,
+      "filterable": true,
+      "searchable": true,
+      "guitar_type": "electric"
+    },
+    {
+      "id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "code": "bridge_type",
+      "label": "Bridge type",
+      "value_type": "enum",
+      "unit": null,
+      "filterable": true,
+      "searchable": true,
+      "guitar_type": "electric"
+    },
+    {
+      "id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "code": "body_material",
+      "label": "Body material",
+      "value_type": "text",
+      "unit": null,
+      "filterable": true,
+      "searchable": true,
+      "guitar_type": null
+    },
+    {
+      "id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "code": "neck_material",
+      "label": "Neck material",
+      "value_type": "text",
+      "unit": null,
+      "filterable": true,
+      "searchable": true,
+      "guitar_type": null
+    },
+    {
+      "id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "code": "fingerboard_material",
+      "label": "Fingerboard material",
+      "value_type": "text",
+      "unit": null,
+      "filterable": true,
+      "searchable": true,
+      "guitar_type": null
+    },
+    {
+      "id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "code": "finish",
+      "label": "Finish",
+      "value_type": "enum",
+      "unit": null,
+      "filterable": true,
+      "searchable": true,
+      "guitar_type": null
+    },
+    {
+      "id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "code": "color",
+      "label": "Color",
+      "value_type": "enum",
+      "unit": null,
+      "filterable": true,
+      "searchable": true,
+      "guitar_type": null
+    },
+    {
+      "id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "code": "string_count",
+      "label": "String count",
+      "value_type": "number",
+      "unit": null,
+      "filterable": true,
+      "searchable": false,
+      "guitar_type": null
+    }
   ],
   "spec_options": [
-    {"id": "o0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000004", "value": "SSS", "sort_order": 1},
-    {"id": "o0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000004", "value": "HSS", "sort_order": 2},
-    {"id": "o0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000004", "value": "HH", "sort_order": 3},
-    {"id": "o0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000004", "value": "HSH", "sort_order": 4},
-    {"id": "o0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000005", "value": "tremolo", "sort_order": 1},
-    {"id": "o0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000005", "value": "hardtail", "sort_order": 2},
-    {"id": "o0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000005", "value": "tune-o-matic", "sort_order": 3},
-    {"id": "o0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000009", "value": "gloss", "sort_order": 1},
-    {"id": "o0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000009", "value": "satin", "sort_order": 2},
-    {"id": "o0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value": "sunburst", "sort_order": 1},
-    {"id": "o0000001-0000-0000-0000-00000000000b", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value": "black", "sort_order": 2},
-    {"id": "o0000001-0000-0000-0000-00000000000c", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value": "white", "sort_order": 3},
-    {"id": "o0000001-0000-0000-0000-00000000000d", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value": "red", "sort_order": 4},
-    {"id": "o0000001-0000-0000-0000-00000000000e", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value": "blue", "sort_order": 5},
-    {"id": "o0000001-0000-0000-0000-00000000000f", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value": "natural", "sort_order": 6},
-    {"id": "o0000001-0000-0000-0000-000000000010", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value": "silver", "sort_order": 7}
+    {
+      "id": "1ed15dd4-b9a7-4ab8-8374-fae13245a222",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value": "SSS",
+      "sort_order": 1
+    },
+    {
+      "id": "dfe70913-df6f-4163-8353-43a629b4ba8c",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value": "HSS",
+      "sort_order": 2
+    },
+    {
+      "id": "48a1936e-3d76-4533-b6f5-ab5b190e550a",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value": "HH",
+      "sort_order": 3
+    },
+    {
+      "id": "12b5526e-85fc-41da-9d8a-4a9fa98ecc68",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value": "HSH",
+      "sort_order": 4
+    },
+    {
+      "id": "a79f861c-e0c2-4a30-9bf5-3d6e0bc338ba",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value": "tremolo",
+      "sort_order": 1
+    },
+    {
+      "id": "f753ab29-c7c3-480f-8400-153878cbb24c",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value": "hardtail",
+      "sort_order": 2
+    },
+    {
+      "id": "861b651c-3f43-43ff-8e87-6a35ad1ebf42",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value": "tune-o-matic",
+      "sort_order": 3
+    },
+    {
+      "id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value": "gloss",
+      "sort_order": 1
+    },
+    {
+      "id": "326950c3-785a-48ad-9bc8-aa1995555f4c",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value": "satin",
+      "sort_order": 2
+    },
+    {
+      "id": "1e0db8ae-c8c1-4794-8059-c4f58064bd7b",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value": "sunburst",
+      "sort_order": 1
+    },
+    {
+      "id": "dfe26e91-1d14-4692-9f67-8b5a6eec025c",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value": "black",
+      "sort_order": 2
+    },
+    {
+      "id": "caff475f-5eb6-4ebb-ace5-8de1f9377dbf",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value": "white",
+      "sort_order": 3
+    },
+    {
+      "id": "86c48e20-837a-4468-9f3d-87e9fecf69fb",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value": "red",
+      "sort_order": 4
+    },
+    {
+      "id": "3a55658f-5463-4a68-9f6f-819d7fd243ed",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value": "blue",
+      "sort_order": 5
+    },
+    {
+      "id": "727da731-17c6-4893-b78b-46c3696a3dab",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value": "natural",
+      "sort_order": 6
+    },
+    {
+      "id": "04395609-2ca2-4aba-8903-47a45eb1e7db",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value": "silver",
+      "sort_order": 7
+    }
   ],
   "guitars": [
     {
-      "id": "g0000001-0000-0000-0000-000000000001",
+      "id": "aaa86e67-8c76-4903-912c-0868621e9135",
       "slug": "fender-player-stratocaster",
       "name": "Player Stratocaster",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f01",
+      "brand_id": "810b59f0-2234-4d4a-a2c8-f43b4c1921a5",
       "model": "Stratocaster",
       "type": "electric",
       "year": 2020,
@@ -60,10 +269,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-000000000002",
+      "id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
       "slug": "gibson-les-paul-standard-50s",
       "name": "Les Paul Standard 50s",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f02",
+      "brand_id": "cec0c7a0-8560-4872-b69e-1a1fce2e8e06",
       "model": "Les Paul Standard",
       "type": "electric",
       "year": 2021,
@@ -72,10 +281,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-000000000003",
+      "id": "35fbb76c-a876-4342-984b-6939efb29170",
       "slug": "ibanez-rg550",
       "name": "RG550",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f03",
+      "brand_id": "11863c5c-aa17-4e41-b93b-6b118b24a546",
       "model": "RG",
       "type": "electric",
       "year": 2019,
@@ -84,10 +293,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-000000000004",
+      "id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
       "slug": "prs-custom-24",
       "name": "Custom 24",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f04",
+      "brand_id": "59e948f8-7bae-4313-a3a7-8e668300c36a",
       "model": "Custom 24",
       "type": "electric",
       "year": 2022,
@@ -96,10 +305,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-000000000005",
+      "id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
       "slug": "yamaha-pacifica-112v",
       "name": "Pacifica 112V",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f05",
+      "brand_id": "2405111b-6537-43c1-aa5b-f6ced572bb01",
       "model": "Pacifica",
       "type": "electric",
       "year": 2020,
@@ -108,10 +317,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-000000000006",
+      "id": "598df861-8012-46f7-bd4d-787e70246a96",
       "slug": "schecter-hellraiser-c-1",
       "name": "Hellraiser C-1",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f06",
+      "brand_id": "82fd8daa-e64d-44c8-9ea1-4a78758633f9",
       "model": "Hellraiser",
       "type": "electric",
       "year": 2018,
@@ -120,10 +329,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-000000000007",
+      "id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
       "slug": "jackson-soloist-sl2",
       "name": "Soloist SL2",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f07",
+      "brand_id": "eacc1f7d-5c74-4157-8413-4b197488029c",
       "model": "Soloist",
       "type": "electric",
       "year": 2021,
@@ -132,10 +341,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-000000000008",
+      "id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
       "slug": "esp-eclipse",
       "name": "Eclipse",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f08",
+      "brand_id": "9252a334-9f18-47eb-97aa-ef96c0cc9e95",
       "model": "Eclipse",
       "type": "electric",
       "year": 2020,
@@ -144,10 +353,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-000000000009",
+      "id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
       "slug": "gretsch-g5622t",
       "name": "G5622T Center Block",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f09",
+      "brand_id": "ba2d1f51-b74e-4e0f-b4ce-797c7bc15b54",
       "model": "G5622T",
       "type": "electric",
       "year": 2021,
@@ -156,10 +365,10 @@
       "updated_at": "2024-01-01T00:00:00Z"
     },
     {
-      "id": "g0000001-0000-0000-0000-00000000000a",
+      "id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
       "slug": "epiphone-les-paul-standard-60s",
       "name": "Les Paul Standard 60s",
-      "brand_id": "b2d61a2a-7b4d-4b5f-9a6b-ef3c3f0b6f0a",
+      "brand_id": "24caed92-8fe6-45fe-a50a-82aa614c9c09",
       "model": "Les Paul Standard",
       "type": "electric",
       "year": 2020,
@@ -169,136 +378,627 @@
     }
   ],
   "guitar_spec_values": [
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 25.5},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 42.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 22},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000002"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000005"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "alder"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "maple"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "pau ferro"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000008"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000e"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000001", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 24.75},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 43.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 22},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000003"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000007"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "rosewood"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000008"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000a"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000002", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 25.5},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 43.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 24},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000004"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000005"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "basswood"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "maple"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "maple"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000008"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000b"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000003", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 25.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 43.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 24},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000003"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000005"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "rosewood"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000008"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000d"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000004", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 25.5},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 41.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 22},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000002"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000005"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "alder"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "maple"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "rosewood"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000008"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000c"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000005", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 25.5},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 42.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 24},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000003"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000006"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "maple"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "rosewood"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000009"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000b"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000006", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 25.5},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 43.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 24},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000004"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000005"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "alder"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "maple"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "ebony"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000009"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-000000000010"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000007", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 24.75},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 43.0},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 22},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000003"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000007"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "ebony"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000008"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000b"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000008", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 24.6},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 42.5},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 22},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000003"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000005"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "maple"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "maple"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "laurel"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000008"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000d"},
-    {"guitar_id": "g0000001-0000-0000-0000-000000000009", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6},
-
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000001", "value_number": 24.75},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000002", "value_number": 43.0},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000003", "value_number": 22},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000004", "value_option_id": "o0000001-0000-0000-0000-000000000003"},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000005", "value_option_id": "o0000001-0000-0000-0000-000000000007"},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000006", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000007", "value_text": "mahogany"},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000008", "value_text": "laurel"},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-000000000009", "value_option_id": "o0000001-0000-0000-0000-000000000008"},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-00000000000a", "value_option_id": "o0000001-0000-0000-0000-00000000000a"},
-    {"guitar_id": "g0000001-0000-0000-0000-00000000000a", "spec_id": "s0000001-0000-0000-0000-00000000000b", "value_number": 6}
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 25.5
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 42.0
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 22
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "dfe70913-df6f-4163-8353-43a629b4ba8c"
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "a79f861c-e0c2-4a30-9bf5-3d6e0bc338ba"
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "alder"
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "maple"
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "pau ferro"
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a"
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "3a55658f-5463-4a68-9f6f-819d7fd243ed"
+    },
+    {
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 24.75
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 43.0
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 22
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "48a1936e-3d76-4533-b6f5-ab5b190e550a"
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "861b651c-3f43-43ff-8e87-6a35ad1ebf42"
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "rosewood"
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a"
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "1e0db8ae-c8c1-4794-8059-c4f58064bd7b"
+    },
+    {
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 25.5
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 43.0
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 24
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "12b5526e-85fc-41da-9d8a-4a9fa98ecc68"
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "a79f861c-e0c2-4a30-9bf5-3d6e0bc338ba"
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "basswood"
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "maple"
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "maple"
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a"
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "dfe26e91-1d14-4692-9f67-8b5a6eec025c"
+    },
+    {
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 25.0
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 43.0
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 24
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "48a1936e-3d76-4533-b6f5-ab5b190e550a"
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "a79f861c-e0c2-4a30-9bf5-3d6e0bc338ba"
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "rosewood"
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a"
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "86c48e20-837a-4468-9f3d-87e9fecf69fb"
+    },
+    {
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 25.5
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 41.0
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 22
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "dfe70913-df6f-4163-8353-43a629b4ba8c"
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "a79f861c-e0c2-4a30-9bf5-3d6e0bc338ba"
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "alder"
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "maple"
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "rosewood"
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a"
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "caff475f-5eb6-4ebb-ace5-8de1f9377dbf"
+    },
+    {
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 25.5
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 42.0
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 24
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "48a1936e-3d76-4533-b6f5-ab5b190e550a"
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "f753ab29-c7c3-480f-8400-153878cbb24c"
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "maple"
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "rosewood"
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "326950c3-785a-48ad-9bc8-aa1995555f4c"
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "dfe26e91-1d14-4692-9f67-8b5a6eec025c"
+    },
+    {
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 25.5
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 43.0
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 24
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "12b5526e-85fc-41da-9d8a-4a9fa98ecc68"
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "a79f861c-e0c2-4a30-9bf5-3d6e0bc338ba"
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "alder"
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "maple"
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "ebony"
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "326950c3-785a-48ad-9bc8-aa1995555f4c"
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "04395609-2ca2-4aba-8903-47a45eb1e7db"
+    },
+    {
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 24.75
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 43.0
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 22
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "48a1936e-3d76-4533-b6f5-ab5b190e550a"
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "861b651c-3f43-43ff-8e87-6a35ad1ebf42"
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "ebony"
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a"
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "dfe26e91-1d14-4692-9f67-8b5a6eec025c"
+    },
+    {
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 24.6
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 42.5
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 22
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "48a1936e-3d76-4533-b6f5-ab5b190e550a"
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "a79f861c-e0c2-4a30-9bf5-3d6e0bc338ba"
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "maple"
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "maple"
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "laurel"
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a"
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "86c48e20-837a-4468-9f3d-87e9fecf69fb"
+    },
+    {
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "a9684871-2b8f-4d62-ba69-508c42eddf6f",
+      "value_number": 24.75
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "d181a466-6d6b-4d49-91f6-ace72c8095e3",
+      "value_number": 43.0
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "5d5e47fc-d256-4b83-a3e5-068ea3d07b8c",
+      "value_number": 22
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "f39dfff3-b461-4aec-9a3b-a17572eb3725",
+      "value_option_id": "48a1936e-3d76-4533-b6f5-ab5b190e550a"
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "34461af8-94a0-4dfc-a336-3262d60f5f8c",
+      "value_option_id": "861b651c-3f43-43ff-8e87-6a35ad1ebf42"
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "83a7c863-77ff-4c1b-8321-070a89575b15",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "27bb2f06-50cb-4371-bfdc-aa23603840c4",
+      "value_text": "mahogany"
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "63117f68-396b-4f07-8768-82b6f55936d5",
+      "value_text": "laurel"
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "b29e6d4d-5db1-4cab-82e2-92970015233c",
+      "value_option_id": "7a54137d-6abf-4faa-9d7d-fb5ee11f841a"
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "3aa78c2e-7d78-4613-b9d3-df568de18c21",
+      "value_option_id": "1e0db8ae-c8c1-4794-8059-c4f58064bd7b"
+    },
+    {
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "spec_id": "67d2ad5b-233a-46f4-8952-5a9ec3f3ac1c",
+      "value_number": 6
+    }
   ],
   "guitar_media": [
-    {"id": "m0000001-0000-0000-0000-000000000001", "guitar_id": "g0000001-0000-0000-0000-000000000001", "kind": "image", "url": "https://www.guitar-specs.com/media/fender-player-stratocaster-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-000000000002", "guitar_id": "g0000001-0000-0000-0000-000000000002", "kind": "image", "url": "https://www.guitar-specs.com/media/gibson-les-paul-standard-50s-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-000000000003", "guitar_id": "g0000001-0000-0000-0000-000000000003", "kind": "image", "url": "https://www.guitar-specs.com/media/ibanez-rg550-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-000000000004", "guitar_id": "g0000001-0000-0000-0000-000000000004", "kind": "image", "url": "https://www.guitar-specs.com/media/prs-custom-24-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-000000000005", "guitar_id": "g0000001-0000-0000-0000-000000000005", "kind": "image", "url": "https://www.guitar-specs.com/media/yamaha-pacifica-112v-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-000000000006", "guitar_id": "g0000001-0000-0000-0000-000000000006", "kind": "image", "url": "https://www.guitar-specs.com/media/schecter-hellraiser-c1-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-000000000007", "guitar_id": "g0000001-0000-0000-0000-000000000007", "kind": "image", "url": "https://www.guitar-specs.com/media/jackson-soloist-sl2-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-000000000008", "guitar_id": "g0000001-0000-0000-0000-000000000008", "kind": "image", "url": "https://www.guitar-specs.com/media/esp-eclipse-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-000000000009", "guitar_id": "g0000001-0000-0000-0000-000000000009", "kind": "image", "url": "https://www.guitar-specs.com/media/gretsch-g5622t-1.jpg", "sort_order": 1},
-    {"id": "m0000001-0000-0000-0000-00000000000a", "guitar_id": "g0000001-0000-0000-0000-00000000000a", "kind": "image", "url": "https://www.guitar-specs.com/media/epiphone-les-paul-standard-60s-1.jpg", "sort_order": 1}
+    {
+      "id": "7eeb4415-562a-47fd-a3cb-0c5b0c5e90f6",
+      "guitar_id": "aaa86e67-8c76-4903-912c-0868621e9135",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/fender-player-stratocaster-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "f043fd21-9163-470e-bccf-fcec41ceb3c5",
+      "guitar_id": "4c3c63d8-2e23-4a81-b29b-fadc703f4946",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/gibson-les-paul-standard-50s-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "394a04e6-2275-4b8c-bd88-cb0ea6899624",
+      "guitar_id": "35fbb76c-a876-4342-984b-6939efb29170",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/ibanez-rg550-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "ec6f93ae-d591-4cdc-8b8a-36e334025d55",
+      "guitar_id": "38f5d0e7-6da0-4230-becf-911e68ff0899",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/prs-custom-24-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "4292f28b-b155-4781-8b62-068c115c55a5",
+      "guitar_id": "70793ff2-eb84-4c0e-8f33-8123798e7d64",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/yamaha-pacifica-112v-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "536e9ffa-248e-4dc2-b8a5-df061337fc88",
+      "guitar_id": "598df861-8012-46f7-bd4d-787e70246a96",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/schecter-hellraiser-c1-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "ba68cbba-74ad-43ba-bca9-40f0faf7dff8",
+      "guitar_id": "2ab95cf5-03f5-46aa-bda8-7b42be06e091",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/jackson-soloist-sl2-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "ea1c4bf0-6b74-4731-aeb6-a2eadfec9cc0",
+      "guitar_id": "ae2efc81-2982-4b88-841a-e05968c1ec8e",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/esp-eclipse-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "47debddc-5fc4-4240-b1e5-469c6818928f",
+      "guitar_id": "78635f40-a070-4cb6-b1e8-377636e4cc44",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/gretsch-g5622t-1.jpg",
+      "sort_order": 1
+    },
+    {
+      "id": "fca8e464-12a5-4616-827b-40391bf7f3ac",
+      "guitar_id": "a2c8f9bd-13fa-42c3-a63a-8908ddf148d5",
+      "kind": "image",
+      "url": "https://www.guitar-specs.com/media/epiphone-les-paul-standard-60s-1.jpg",
+      "sort_order": 1
+    }
   ]
 }

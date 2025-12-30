@@ -23,7 +23,9 @@ export type GuitarDetail = {
 };
 
 const API_BASE =
-  process.env.NEXT_PUBLIC_API_BASE || "http://localhost:8080/api/v1";
+  process.env.API_BASE ||
+  process.env.NEXT_PUBLIC_API_BASE ||
+  "http://localhost:8080/api/v1";
 
 export async function fetchGuitars(): Promise<GuitarListItem[]> {
   const response = await fetch(`${API_BASE}/guitars`, {
