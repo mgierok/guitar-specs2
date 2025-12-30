@@ -9,13 +9,13 @@ This repo hosts Guitar-Specs, a web app for searching, viewing, and comparing gu
 - `assets/` — static media (images, icons, fixtures).
 - `docs/` — architecture notes and API contracts.
 
-Example: `frontend/src/app/guitars/[id]/page.tsx` and `backend/internal/handlers/guitars.go`.
+Example: `frontend/src/app/guitars/[slug]/page.tsx` and `backend/internal/handlers/guitars.go`.
 
 Primary datastore: PostgreSQL (self-hosted initially).
 Data model source of truth: `DATABASE.md`.
 
 ## Build, Test, and Development Commands
-Document the exact commands once tooling is initialized. Use npm for the frontend by default:
+Use npm for the frontend by default:
 
 - `frontend/` — `npm run dev`, `npm run build`, `npm test`.
 - `backend/` — `go run ./cmd/api`, `go test ./...`.
@@ -127,7 +127,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Backend: Go’s `testing` package for unit and handler tests.
 - Name tests with clear intent (e.g., `guitar-search.test.ts`, `TestGetGuitarByID`).
 - Run relevant tests as the last step of each plan execution and keep tests updated with changes.
- - For changes to Docker, env, data, or migrations, run `scripts/smoke.sh`.
+- For changes to Docker, env, data, or migrations, run `scripts/smoke.sh`.
 
 ## Unit Test Expectations
 - Backend: add unit tests for handlers, query mappers, and seed/loaders; include success and error paths.
@@ -148,7 +148,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Running `curl` for debugging is pre-approved.
 
 ## Security & Configuration Tips
-Keep secrets out of the repo. Use `.env` files for local config and list required variables in `docs/config.md`.
+Keep secrets out of the repo. Use `.env` files for local config and document required variables alongside the setup instructions.
 
 ## Deployment & CDN
-The public site is hosted at `https://www.guitar-specs.com/` and uses the free tier of Cloudflare CDN. Note any cache rules or headers in `docs/deployment.md` once the stack is live.
+The public site is hosted at `https://www.guitar-specs.com/` and uses the free tier of Cloudflare CDN. Note any cache rules or headers once the stack is live.
