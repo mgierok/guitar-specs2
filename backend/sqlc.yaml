@@ -1,0 +1,26 @@
+version: "2"
+sql:
+  - schema: "internal/db/schema.sql"
+    queries: "internal/db/queries.sql"
+    engine: "postgresql"
+    gen:
+      go:
+        package: "db"
+        out: "internal/db/sqlc"
+        sql_package: "pgx/v5"
+        overrides:
+          - db_type: "uuid"
+            go_type: "string"
+          - db_type: "timestamptz"
+            go_type: "time.Time"
+          - db_type: "numeric"
+            go_type: "float64"
+            nullable: true
+          - db_type: "guitar_type"
+            go_type: "string"
+          - db_type: "spec_value_type"
+            go_type: "string"
+          - db_type: "media_kind"
+            go_type: "string"
+          - db_type: "spec_source"
+            go_type: "string"

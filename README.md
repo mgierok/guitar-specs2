@@ -43,6 +43,11 @@ docker compose up --build
 - Frontend: `http://localhost:3000`
 - API: `http://localhost:8080`
 
+4) Apply migrations (once Postgres is running):
+```bash
+docker compose exec db psql -U postgres -d guitar_specs -f /migrations/0001_init.up.sql
+```
+
 ## Local Testing (Containers)
 Run tests inside the containers:
 
@@ -102,3 +107,12 @@ Document required environment variables in `docs/config.md` as the API and web a
 
 ## Test Data
 Canonical test dataset: `data/guitars.json`. Keep it aligned with `DATABASE.md`.
+
+## API Endpoints
+Base path: `/api/v1`
+- `GET /health` — service health check
+- `GET /guitars` — list guitars (pagination/filtering to be wired)
+- `GET /guitars/{slug}` — guitar detail
+
+## CI
+GitHub Actions runs frontend lint and backend tests on PRs and on pushes to `dev`.
