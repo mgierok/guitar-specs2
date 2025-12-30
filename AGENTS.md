@@ -143,6 +143,8 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Ask for explicit approval before adding any new external library.
 - Provide a brief plan and wait for approval before making any code changes.
 - `gofmt -w *.go` is pre-approved when needed.
+- Running backend tests (`go test ./...`) and frontend tests (`npm test`) is pre-approved.
+- Running `curl` for debugging is pre-approved.
 
 ## Security & Configuration Tips
 Keep secrets out of the repo. Use `.env` files for local config and list required variables in `docs/config.md`.
