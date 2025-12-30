@@ -114,6 +114,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Canonical seed/test dataset is `data/guitars.json` and must match `DATABASE.md`.
 - Seed scripts (when added) should live in `backend/cmd/seed` or `backend/internal/seed`.
 - Any schema change requires updating `data/guitars.json` and related loaders.
+- In containers, the backend auto-applies migrations and seeds when the database is empty.
 
 ## Frontend Routing & SEO (Next.js)
 - Use the App Router (`frontend/src/app`) with route segments for `/(marketing)`, `/guitars`, `/guitars/[slug]`, and `/compare`.
