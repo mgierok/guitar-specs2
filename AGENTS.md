@@ -132,6 +132,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Link relevant issues or tasks when available.
 - Keep `README.md`, `AGENTS.md`, and `DATABASE.md` updated with any relevant changes.
 - Ask for explicit approval before adding any new external library.
+- Provide a brief plan and wait for approval before making any code changes.
 
 ## Security & Configuration Tips
 Keep secrets out of the repo. Use `.env` files for local config and list required variables in `docs/config.md`.
