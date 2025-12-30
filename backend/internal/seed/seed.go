@@ -7,7 +7,7 @@ import (
 	"time"
 
 	"github.com/jackc/pgx/v5/pgtype"
-	"github.com/mgierok/guitar-specs2/backend/internal/db/sqlc"
+	sqlc "github.com/mgierok/guitar-specs2/backend/internal/db/sqlc"
 )
 
 type Dataset struct {

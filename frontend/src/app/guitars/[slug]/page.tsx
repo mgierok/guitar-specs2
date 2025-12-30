@@ -51,7 +51,7 @@ export default async function GuitarDetailPage({ params }: PageProps) {
             {guitar.description && <span>{guitar.description}</span>}
             {Object.entries(guitar.specs).map(([key, value]) => (
               <span key={key}>
-                {key.replace(/_/g, \" \")}: {value}
+                {key.replace(/_/g, " ")}: {value}
               </span>
             ))}
           </div>

@@ -41,7 +41,7 @@ SELECT
       LIMIT 1
     ),
     ''
-  ) AS thumbnail_url
+  )::text AS thumbnail_url
 FROM guitar
 JOIN brand ON brand.id = guitar.brand_id
 ORDER BY guitar.name ASC;

@@ -302,7 +302,7 @@ SELECT
       LIMIT 1
     ),
     ''
-  ) AS thumbnail_url
+  )::text AS thumbnail_url
 FROM guitar
 JOIN brand ON brand.id = guitar.brand_id
 ORDER BY guitar.name ASC
@@ -316,7 +316,7 @@ type ListGuitarsRow struct {
 	Type         string
 	Year         pgtype.Int4
 	BrandName    string
-	ThumbnailUrl interface{}
+	ThumbnailUrl string
 }
 
 func (q *Queries) ListGuitars(ctx context.Context) ([]ListGuitarsRow, error) {
