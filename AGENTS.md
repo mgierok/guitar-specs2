@@ -76,6 +76,14 @@ Design should be clear and steady with a purple tone:
 - Prioritize readability and consistent spacing across pages.
 - Keep comparison tables and spec lists scannable.
 
+## Current Functionality (Source of Truth)
+- Homepage with search CTA and overview content.
+- Guitars list page with server-rendered data from the API.
+- Guitar detail page per slug.
+- Comparison page layout (UI-only).
+- API endpoints: `GET /api/v1/health`, `GET /api/v1/guitars`, `GET /api/v1/guitars/{slug}`.
+- Container startup auto-applies migrations and seeds the database when empty.
+
 ## SEO, Performance, and Accessibility
 The site must be optimized for SEO and Core Web Vitals while following current usability and accessibility rules, including the European Accessibility Act:
 
@@ -141,6 +149,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - PRs must include: summary, tests run, and screenshots for UI changes.
 - Link relevant issues or tasks when available.
 - Keep `README.md`, `AGENTS.md`, and `DATABASE.md` updated with any relevant changes.
+- Update the "Current Functionality" section in `AGENTS.md` whenever behavior or features change.
 - Ask for explicit approval before adding any new external library.
 - Provide a brief plan and wait for approval before making any code changes.
 - `gofmt -w *.go` is pre-approved when needed.
