@@ -128,6 +128,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 
 ## Commit & Pull Request Guidelines
 - Use short, imperative commit messages (e.g., "Add comparison grid").
+- Commit message format: `type(scope): summary` (Conventional Commits), e.g. `feat(api): add guitars list endpoint`.
 - PRs must include: summary, tests run, and screenshots for UI changes.
 - Link relevant issues or tasks when available.
 - Keep `README.md`, `AGENTS.md`, and `DATABASE.md` updated with any relevant changes.
