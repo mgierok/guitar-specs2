@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { renderToString } from "react-dom/server";
 import { describe, expect, it } from "vitest";
 
 import RootLayout, { metadata } from "./layout";
@@ -11,12 +11,12 @@ describe("RootLayout", () => {
   });
 
   it("renders children", () => {
-    render(
+    const html = renderToString(
       <RootLayout>
         <div>Child content</div>
       </RootLayout>
     );
 
-    expect(screen.getByText(/Child content/i)).toBeInTheDocument();
+    expect(html).toContain("Child content");
   });
 });
