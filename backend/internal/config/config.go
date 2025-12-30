@@ -3,14 +3,18 @@ package config
 import "github.com/spf13/viper"
 
 type Config struct {
-	Env        string
-	ServerPort string
-	DBHost     string
-	DBPort     string
-	DBUser     string
-	DBPassword string
-	DBName     string
-	DBSSLMode  string
+	Env         string
+	ServerPort  string
+	DBHost      string
+	DBPort      string
+	DBUser      string
+	DBPassword  string
+	DBName      string
+	DBSSLMode   string
+	AutoMigrate bool
+	AutoSeed    bool
+	MigratePath string
+	SeedPath    string
 }
 
 func Load() (Config, error) {
@@ -23,18 +27,26 @@ func Load() (Config, error) {
 	v.SetDefault("DB_PASSWORD", "postgres")
 	v.SetDefault("DB_NAME", "guitar_specs")
 	v.SetDefault("DB_SSLMODE", "disable")
+	v.SetDefault("AUTO_MIGRATE", false)
+	v.SetDefault("AUTO_SEED", false)
+	v.SetDefault("MIGRATE_PATH", "/app/migrations/0001_init.up.sql")
+	v.SetDefault("SEED_PATH", "/data/guitars.json")
 	v.SetEnvPrefix("GUITAR_SPECS")
 	v.AutomaticEnv()
 
 	cfg := Config{
-		Env:        v.GetString("ENV"),
-		ServerPort: v.GetString("SERVER_PORT"),
-		DBHost:     v.GetString("DB_HOST"),
-		DBPort:     v.GetString("DB_PORT"),
-		DBUser:     v.GetString("DB_USER"),
-		DBPassword: v.GetString("DB_PASSWORD"),
-		DBName:     v.GetString("DB_NAME"),
-		DBSSLMode:  v.GetString("DB_SSLMODE"),
+		Env:         v.GetString("ENV"),
+		ServerPort:  v.GetString("SERVER_PORT"),
+		DBHost:      v.GetString("DB_HOST"),
+		DBPort:      v.GetString("DB_PORT"),
+		DBUser:      v.GetString("DB_USER"),
+		DBPassword:  v.GetString("DB_PASSWORD"),
+		DBName:      v.GetString("DB_NAME"),
+		DBSSLMode:   v.GetString("DB_SSLMODE"),
+		AutoMigrate: v.GetBool("AUTO_MIGRATE"),
+		AutoSeed:    v.GetBool("AUTO_SEED"),
+		MigratePath: v.GetString("MIGRATE_PATH"),
+		SeedPath:    v.GetString("SEED_PATH"),
 	}
 
 	return cfg, nil

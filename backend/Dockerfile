@@ -14,6 +14,7 @@ FROM gcr.io/distroless/base-debian12
 WORKDIR /app
 COPY --from=builder /out/api /app/api
 COPY --from=builder /out/seed /app/seed
+COPY --from=builder /app/migrations /app/migrations
 
 EXPOSE 8080
 

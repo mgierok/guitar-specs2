@@ -14,6 +14,8 @@ import (
 	"github.com/mgierok/guitar-specs2/backend/internal/handlers"
 	"github.com/mgierok/guitar-specs2/backend/internal/log"
 	"github.com/mgierok/guitar-specs2/backend/internal/middleware"
+	"github.com/mgierok/guitar-specs2/backend/internal/migrate"
+	"github.com/mgierok/guitar-specs2/backend/internal/seed"
 )
 
 func main() {
@@ -24,7 +26,8 @@ func main() {
 
 	logger := log.New(cfg.Env)
 
-	pool, err := db.Open(context.Background(), db.Config{
+	ctx := context.Background()
+	pool, err := db.Open(ctx, db.Config{
 		Host:     cfg.DBHost,
 		Port:     cfg.DBPort,
 		User:     cfg.DBUser,
@@ -39,6 +42,37 @@ func main() {
 	defer pool.Close()
 
 	queries := dbsqlc.New(pool)
+
+	if cfg.AutoMigrate {
+		if err := migrate.Apply(ctx, pool, cfg.MigratePath); err != nil {
+			logger.Error("migrate_failed", "error", err)
+			return
+		}
+	}
+
+	if cfg.AutoSeed {
+		var count int
+		if err := pool.QueryRow(ctx, "SELECT COUNT(*) FROM guitar").Scan(&count); err != nil {
+			logger.Error("seed_check_failed", "error", err)
+			return
+		}
+
+		if count == 0 {
+			data, err := seed.Load(cfg.SeedPath)
+			if err != nil {
+				logger.Error("seed_load_failed", "error", err)
+				return
+			}
+			if err := seed.Apply(ctx, queries, data); err != nil {
+				logger.Error("seed_apply_failed", "error", err)
+				return
+			}
+			logger.Info("seed_applied", "guitars", len(data.Guitars))
+		} else {
+			logger.Info("seed_skip", "reason", "data_exists", "guitars", count)
+		}
+	}
+
 	guitarHandler := handlers.GuitarHandler{Queries: queries}
 
 	r := chi.NewRouter()

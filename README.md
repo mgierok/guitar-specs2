@@ -42,11 +42,7 @@ docker compose up --build
 3) Open the app:
 - Frontend: `http://localhost:3000`
 - API: `http://localhost:8080`
-
-4) Apply migrations (once Postgres is running):
-```bash
-docker compose exec db psql -U postgres -d guitar_specs -f /migrations/0001_init.up.sql
-```
+4) The backend auto-applies migrations and seeds `data/guitars.json` on first boot in containers.
 
 ## Local Testing (Containers)
 Run tests inside the containers:

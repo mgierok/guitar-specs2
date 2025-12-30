@@ -5,6 +5,11 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: guitar_specs
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d guitar_specs"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
     ports:
       - "5432:5432"
     volumes:
@@ -23,12 +28,17 @@ services:
       GUITAR_SPECS_DB_PASSWORD: postgres
       GUITAR_SPECS_DB_NAME: guitar_specs
       GUITAR_SPECS_DB_SSLMODE: disable
+      GUITAR_SPECS_AUTO_MIGRATE: "true"
+      GUITAR_SPECS_AUTO_SEED: "true"
+      GUITAR_SPECS_MIGRATE_PATH: "/app/migrations/0001_init.up.sql"
+      GUITAR_SPECS_SEED_PATH: "/data/guitars.json"
     volumes:
       - ./data:/data:ro
     ports:
       - "8080:8080"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
 
   frontend:
     build:

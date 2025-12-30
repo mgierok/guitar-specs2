@@ -17,6 +17,12 @@ func TestLoadDefaults(t *testing.T) {
 	if cfg.DBHost != "localhost" {
 		t.Fatalf("expected default db host localhost, got %s", cfg.DBHost)
 	}
+	if cfg.AutoMigrate {
+		t.Fatalf("expected auto migrate false, got true")
+	}
+	if cfg.AutoSeed {
+		t.Fatalf("expected auto seed false, got true")
+	}
 }
 
 func TestLoadEnvOverrides(t *testing.T) {
@@ -24,6 +30,10 @@ func TestLoadEnvOverrides(t *testing.T) {
 	t.Setenv("GUITAR_SPECS_SERVER_PORT", "9999")
 	t.Setenv("GUITAR_SPECS_DB_HOST", "db")
 	t.Setenv("GUITAR_SPECS_DB_NAME", "guitars")
+	t.Setenv("GUITAR_SPECS_AUTO_MIGRATE", "true")
+	t.Setenv("GUITAR_SPECS_AUTO_SEED", "true")
+	t.Setenv("GUITAR_SPECS_MIGRATE_PATH", "/tmp/migrate.sql")
+	t.Setenv("GUITAR_SPECS_SEED_PATH", "/tmp/seed.json")
 
 	cfg, err := Load()
 	if err != nil {
@@ -41,5 +51,17 @@ func TestLoadEnvOverrides(t *testing.T) {
 	}
 	if cfg.DBName != "guitars" {
 		t.Fatalf("expected db name guitars, got %s", cfg.DBName)
+	}
+	if !cfg.AutoMigrate {
+		t.Fatalf("expected auto migrate true, got false")
+	}
+	if !cfg.AutoSeed {
+		t.Fatalf("expected auto seed true, got false")
+	}
+	if cfg.MigratePath != "/tmp/migrate.sql" {
+		t.Fatalf("expected migrate path /tmp/migrate.sql, got %s", cfg.MigratePath)
+	}
+	if cfg.SeedPath != "/tmp/seed.json" {
+		t.Fatalf("expected seed path /tmp/seed.json, got %s", cfg.SeedPath)
 	}
 }
