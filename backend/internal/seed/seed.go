@@ -3,6 +3,7 @@ package seed
 import (
 	"context"
 	"encoding/json"
+	"io"
 	"os"
 	"time"
 
@@ -80,11 +81,14 @@ func Load(path string) (Dataset, error) {
 	}
 	defer file.Close()
 
+	return loadFromReader(file)
+}
+
+func loadFromReader(reader io.Reader) (Dataset, error) {
 	var data Dataset
-	if err := json.NewDecoder(file).Decode(&data); err != nil {
+	if err := json.NewDecoder(reader).Decode(&data); err != nil {
 		return Dataset{}, err
 	}
-
 	return data, nil
 }
 

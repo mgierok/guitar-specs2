@@ -12,8 +12,15 @@ import (
 	db "github.com/mgierok/guitar-specs2/backend/internal/db/sqlc"
 )
 
+type GuitarQueries interface {
+	ListGuitars(ctx context.Context) ([]db.ListGuitarsRow, error)
+	GetGuitarBySlug(ctx context.Context, slug string) (db.GetGuitarBySlugRow, error)
+	GetGuitarSpecs(ctx context.Context, guitarID string) ([]db.GetGuitarSpecsRow, error)
+	GetGuitarMedia(ctx context.Context, guitarID string) ([]db.GetGuitarMediaRow, error)
+}
+
 type GuitarHandler struct {
-	Queries *db.Queries
+	Queries GuitarQueries
 }
 
 type GuitarListItem struct {

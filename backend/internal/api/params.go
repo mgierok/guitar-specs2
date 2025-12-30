@@ -21,6 +21,9 @@ func ParseListParams(r *http.Request) ListParams {
 	for _, value := range r.URL.Query()["filter"] {
 		parts := strings.SplitN(value, ":", 2)
 		if len(parts) == 2 {
+			if _, exists := filters[parts[0]]; exists {
+				continue
+			}
 			filters[parts[0]] = parts[1]
 		}
 	}

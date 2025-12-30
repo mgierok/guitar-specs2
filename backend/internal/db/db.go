@@ -17,7 +17,18 @@ type Config struct {
 }
 
 func Open(ctx context.Context, cfg Config) (*pgxpool.Pool, error) {
-	dsn := fmt.Sprintf(
+	dsn := buildDSN(cfg)
+
+	pool, err := pgxpool.New(ctx, dsn)
+	if err != nil {
+		return nil, err
+	}
+
+	return pool, nil
+}
+
+func buildDSN(cfg Config) string {
+	return fmt.Sprintf(
 		"postgres://%s:%s@%s:%s/%s?sslmode=%s",
 		cfg.User,
 		cfg.Password,
@@ -26,11 +37,4 @@ func Open(ctx context.Context, cfg Config) (*pgxpool.Pool, error) {
 		cfg.Name,
 		cfg.SSLMode,
 	)
-
-	pool, err := pgxpool.New(ctx, dsn)
-	if err != nil {
-		return nil, err
-	}
-
-	return pool, nil
 }

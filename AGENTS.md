@@ -125,6 +125,13 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Frontend: Vitest + React Testing Library.
 - Backend: Go’s `testing` package for unit and handler tests.
 - Name tests with clear intent (e.g., `guitar-search.test.ts`, `TestGetGuitarByID`).
+- Run relevant tests as the last step of each plan execution and keep tests updated with changes.
+
+## Unit Test Expectations
+- Backend: add unit tests for handlers, query mappers, and seed/loaders; include success and error paths.
+- Frontend: add unit tests for page rendering, empty states, and key interactions.
+- Any new feature or behavior change must include or update tests.
+- Avoid adding unused code paths without accompanying tests.
 
 ## Commit & Pull Request Guidelines
 - Use short, imperative commit messages (e.g., "Add comparison grid").
