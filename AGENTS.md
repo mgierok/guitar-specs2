@@ -117,6 +117,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Filtering: repeatable `filter` params (e.g., `filter=type:electric&filter=brand:Fender`).
 - Sorting: `?sort=field:asc` or `?sort=field:desc`.
 - Errors: JSON with `code`, `message`, and optional `details`.
+- Canonical API reference: `API.md`.
 
 ## Data & Seed Rules
 - Canonical seed/test dataset is `data/guitars.json` and must match `DATABASE.md`.
@@ -142,6 +143,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 - Frontend: add unit tests for page rendering, empty states, and key interactions.
 - Any new feature or behavior change must include or update tests.
 - Avoid adding unused code paths without accompanying tests.
+- Use TDD: write a failing test first for new behavior or refactors, then implement the change.
 
 ## Commit & Pull Request Guidelines
 - Use short, imperative commit messages (e.g., "Add comparison grid").
@@ -158,6 +160,7 @@ The site must be optimized for SEO and Core Web Vitals while following current u
 
 ## Security & Configuration Tips
 Keep secrets out of the repo. Use `.env` files for local config and document required variables alongside the setup instructions.
+If git reports temp cache warnings in this sandbox, set `TMPDIR` to a writable path (e.g., `.tmp`).
 
 ## Deployment & CDN
 The public site is hosted at `https://www.guitar-specs.com/` and uses the free tier of Cloudflare CDN. Note any cache rules or headers once the stack is live.
